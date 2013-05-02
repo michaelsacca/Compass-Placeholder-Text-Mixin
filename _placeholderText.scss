@@ -1,14 +1,14 @@
-@mixin input-placeholder($color) {
-  &.placeholder {
-    color: $color; 
-	}
-  &:-moz-placeholder {
-    color: $color; 
-	}
-  &:-ms-input-placeholder {
-    color: $color; 
-	}
+@mixin input-placeholder {
   &::-webkit-input-placeholder {
-    color: $color; 
-	} 
+    @content;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    @content;
+  }
+  &::-moz-placeholder {  /* Firefox 19+ */
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
 }
