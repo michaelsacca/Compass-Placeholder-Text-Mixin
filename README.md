@@ -1,32 +1,44 @@
-Compass-Placeholder-Text-Mixin
-==============================
+# Compass-Placeholder-Text-Mixin
 
 Simple Mixin For Compass Placeholder Text
-		
-*Steps:*
+        
+## Steps:
 
-1. Add the .input-placeholder() mixin from _placeholderText.scss to your compass stylesheet (or reference it in an @import statement)
-2. In your stylesheet, call the .input-placeholder() mixin anywhere you want to style your placeholder text
+1. Add the .input-placeholder mixin from _placeholderText.scss to your stylesheet (or reference it in an @import statement)
+2. In your stylesheet, call the .input-placeholder {} mixin anywhere you want to style your placeholder text
 
-.inputCls {
-	@include input-placeholder {
-		color: #ccc;
-		background: #F00;
-	}
-} 
+### This Scss code:
 
-Will compile to: 
-				  
-.inputCls.placeholder {
-	color: #ccc;
-	background: #F00;
-}
-.inputCls:-moz-placeholder {
-	color: #ccc;
-	background: #F00;
-}
-.inputCls::-webkit-input-placeholder {
-	color: #ccc;
-	background: #F00;
-}
-				  
+```SCSS
+    input {
+        @include input-placeholder {
+            color: #ccc;
+            background: #F00;
+        }
+    }
+``` 
+
+### Will compile to: 
+    
+```CSS
+    input.placeholder {
+        color: #ccc;
+        background: #F00;
+    }
+    input:-moz-placeholder {
+        color: #ccc;
+        background: #F00;
+    }
+    input::-moz-placeholder {
+        color: #ccc;
+        background: #F00;
+    }
+    input:-ms-input-placeholder {
+        color: #ccc;
+        background: #F00;
+    }
+    input::-webkit-input-placeholder {
+        color: #ccc;
+        background: #F00;
+    }
+```
